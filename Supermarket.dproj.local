@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2018/12/20 21:55:49.770,=C:\Users\olive\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
-    <Transaction>2018/12/20 21:56:26.127,C:\Projects\Supermarket\Main.pas=C:\Users\olive\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
-    <Transaction>2018/12/20 21:56:26.127,C:\Projects\Supermarket\Main.dfm=C:\Users\olive\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
-    <Transaction>2018/12/20 21:56:33.770,C:\Projects\Supermarket\Supermarket.dproj=C:\Users\olive\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+	<Transactions>
+    <Transaction>2018/12/20 21:55:49.000.770,=C:\Users\olive\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2018/12/20 21:56:26.000.127,C:\Users\olive\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Projects\Supermarket\Main.pas</Transaction>
+    <Transaction>2018/12/20 21:56:26.000.127,C:\Users\olive\Documents\Embarcadero\Studio\Projects\Unit3.dfm=C:\Projects\Supermarket\Main.dfm</Transaction>
+    <Transaction>2018/12/20 21:56:33.000.770,C:\Users\olive\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Projects\Supermarket\Supermarket.dproj</Transaction>
+    <Transaction>2018/12/22 15:53:24.211,=C:\Projects\Supermarket\Unit1.pas</Transaction>
+    <Transaction>2018/12/22 15:53:33.171,C:\Projects\Supermarket\unitMain.dfm=C:\Projects\Supermarket\Unit1.dfm</Transaction>
+    <Transaction>2018/12/22 15:53:33.171,C:\Projects\Supermarket\unitMain.pas=C:\Projects\Supermarket\Unit1.pas</Transaction>
+    <Transaction>2018/12/22 16:21:29.226,=C:\Projects\Supermarket\Unit1.pas</Transaction>
+    <Transaction>2018/12/22 16:21:57.679,C:\Projects\Supermarket\connection\unitConnection.pas=C:\Projects\Supermarket\Unit1.pas</Transaction>
+    <Transaction>2018/12/22 16:21:57.679,C:\Projects\Supermarket\connection\unitConnection.dfm=C:\Projects\Supermarket\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

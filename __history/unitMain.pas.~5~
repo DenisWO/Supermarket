@@ -1,0 +1,40 @@
+unit unitMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TformMain = class(TForm)
+    MainMenu1: TMainMenu;
+    Arquivo1: TMenuItem;
+    Cadastro1: TMenuItem;
+    Movimentacao1: TMenuItem;
+    Relatorio1: TMenuItem;
+    Salvar1: TMenuItem;
+    Fechar1: TMenuItem;
+    Produtos1: TMenuItem;
+    Cliente1: TMenuItem;
+    Fornecedores1: TMenuItem;
+    procedure fechar(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formMain: TformMain;
+
+implementation
+
+{$R *.dfm}
+
+procedure TformMain.fechar(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+end.

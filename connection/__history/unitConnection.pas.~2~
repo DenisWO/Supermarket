@@ -1,0 +1,25 @@
+unit unitConnection;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TDataModuleConnection = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModuleConnection: TDataModuleConnection;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

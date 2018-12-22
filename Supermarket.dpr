@@ -2,13 +2,14 @@ program Supermarket;
 
 uses
   Vcl.Forms,
-  Main in 'Main.pas' {Form3};
+  unitMain in 'unitMain.pas' {formMain},
+  unitConnection in 'connection\unitConnection.pas' {DataModuleConnection: TDataModule};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TformMain, formMain);
   Application.Run;
 end.
