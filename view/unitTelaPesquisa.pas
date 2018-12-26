@@ -1,0 +1,57 @@
+unit unitTelaPesquisa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask,
+  Vcl.ComCtrls, Vcl.ExtCtrls, Data.DB, ZAbstractRODataset, ZAbstractDataset,
+  ZDataset, Vcl.DBCtrls, Vcl.Grids, Vcl.DBGrids, unitConnection;
+
+type
+  TformTelaPesquisa = class(TForm)
+    pageControlTelaPesquisa: TPageControl;
+    panelTelaPesquisa: TPanel;
+    tabPesquisa: TTabSheet;
+    tabManutencao: TTabSheet;
+    Panel1: TPanel;
+    maskPesquisar: TMaskEdit;
+    buttonPesquisar: TBitBtn;
+    dbPesquisa: TDBGrid;
+    buttonNovo: TBitBtn;
+    buttonAlterar: TBitBtn;
+    buttonCancelar: TBitBtn;
+    buttonFechar: TBitBtn;
+    DBNavigator1: TDBNavigator;
+    buttonGravar: TBitBtn;
+    buttonDeletar: TBitBtn;
+    queryPesquisa: TZQuery;
+    dataSourcePesquisa: TDataSource;
+    procedure create(Sender: TObject);
+    procedure buttonFecharClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formTelaPesquisa: TformTelaPesquisa;
+
+implementation
+
+{$R *.dfm}
+
+procedure TformTelaPesquisa.buttonFecharClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TformTelaPesquisa.create(Sender: TObject);
+begin
+  queryPesquisa.Connection := DataModuleConnection.ConnectionDB;
+  dataSourcePesquisa.DataSet := queryPesquisa;
+  dbPesquisa := dataSourcePesquisa;
+end;
+
+end.

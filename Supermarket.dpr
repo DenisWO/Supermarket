@@ -3,7 +3,8 @@ program Supermarket;
 uses
   Vcl.Forms,
   unitMain in 'unitMain.pas' {formMain},
-  unitConnection in 'connection\unitConnection.pas' {DataModuleConnection: TDataModule};
+  unitConnection in 'connection\unitConnection.pas' {DataModuleConnection: TDataModule},
+  unitTelaPesquisa in 'view\unitTelaPesquisa.pas' {formTelaPesquisa};
 
 {$R *.res}
 
@@ -11,5 +12,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TformMain, formMain);
+  Application.CreateForm(TformTelaPesquisa, formTelaPesquisa);
   Application.Run;
 end.

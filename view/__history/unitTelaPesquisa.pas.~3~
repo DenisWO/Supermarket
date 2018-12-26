@@ -1,0 +1,32 @@
+unit unitTelaPesquisa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask,
+  Vcl.ComCtrls, Vcl.ExtCtrls;
+
+type
+  TformTelaPesquisa = class(TForm)
+    pageControlTelaPesquisa: TPageControl;
+    panelTelaPesquisa: TPanel;
+    tabPesquisa: TTabSheet;
+    tabManutencao: TTabSheet;
+    Panel1: TPanel;
+    maskPesquisar: TMaskEdit;
+    buttonPesquisar: TBitBtn;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formTelaPesquisa: TformTelaPesquisa;
+
+implementation
+
+{$R *.dfm}
+
+end.
