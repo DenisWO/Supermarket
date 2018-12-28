@@ -60,8 +60,7 @@ end;
 
 procedure TformMain.Produtos1Click(Sender: TObject);
 begin
-  //formCadastroProduto := TformCadastroProduto.Create(Self);
-  formCadastroProduto.create(Self);
+  formCadastroProduto := TformCadastroProduto.InheritsFrom(TForm);
   formCadastroProduto.ShowModal;
   formCadastroProduto.Release;
 end;

@@ -28,6 +28,7 @@ type
     queryPesquisa: TZQuery;
     dataSourcePesquisa: TDataSource;
     procedure create(Sender: TObject);
+    procedure buttonFecharClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,10 +42,16 @@ implementation
 
 {$R *.dfm}
 
-procedure TformTelaPesquisa.create(Sender: TObject);
+procedure TformTelaPesquisa.buttonFecharClick(Sender: TObject);
 begin
-  queryPesquisa.Connection := unitConnection.DataModuleConnection;
+  Close;
+end;
+
+procedure TformTelaPesquisa.OnCreate(Sender: TObject);
+begin
+  queryPesquisa.Connection := DataModuleConnection.ConnectionDB;
   dataSourcePesquisa.DataSet := queryPesquisa;
+  dbPesquisa.DataSource := dataSourcePesquisa;
 end;
 
 end.

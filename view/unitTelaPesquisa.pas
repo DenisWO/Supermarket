@@ -27,7 +27,7 @@ type
     buttonDeletar: TBitBtn;
     queryPesquisa: TZQuery;
     dataSourcePesquisa: TDataSource;
-    procedure create(Sender: TObject);
+    procedure OnCreate(Sender: TObject);
     procedure buttonFecharClick(Sender: TObject);
   private
     { Private declarations }
@@ -47,7 +47,7 @@ begin
   Close;
 end;
 
-procedure TformTelaPesquisa.Create(Sender: TObject);
+procedure TformTelaPesquisa.OnCreate(Sender: TObject);
 begin
   queryPesquisa.Connection := DataModuleConnection.ConnectionDB;
   dataSourcePesquisa.DataSet := queryPesquisa;
