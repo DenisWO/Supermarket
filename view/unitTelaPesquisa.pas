@@ -47,11 +47,11 @@ begin
   Close;
 end;
 
-procedure TformTelaPesquisa.create(Sender: TObject);
+procedure TformTelaPesquisa.Create(Sender: TObject);
 begin
   queryPesquisa.Connection := DataModuleConnection.ConnectionDB;
   dataSourcePesquisa.DataSet := queryPesquisa;
-  dbPesquisa := dataSourcePesquisa;
+  dbPesquisa.DataSource := dataSourcePesquisa;
 end;
 
 end.

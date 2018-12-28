@@ -33,6 +33,7 @@ object formMain: TformMain
       Caption = 'Cadastro'
       object Produtos1: TMenuItem
         Caption = 'Produtos'
+        OnClick = Produtos1Click
       end
       object Cliente1: TMenuItem
         Caption = 'Clientes'

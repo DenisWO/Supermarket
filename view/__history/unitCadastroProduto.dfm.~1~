@@ -1,0 +1,10 @@
+inherited formTelaPesquisa1: TformTelaPesquisa1
+  Caption = 'formTelaPesquisa1'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited panelTelaPesquisa: TPanel
+    inherited DBNavigator1: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+end

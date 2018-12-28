@@ -24,10 +24,8 @@ object formTelaPesquisa: TformTelaPesquisa
     ActivePage = tabPesquisa
     Align = alClient
     TabOrder = 0
-    ExplicitHeight = 319
     object tabPesquisa: TTabSheet
       Caption = 'Pesquisa'
-      ExplicitHeight = 291
       object Panel1: TPanel
         Left = 0
         Top = 0
@@ -54,6 +52,9 @@ object formTelaPesquisa: TformTelaPesquisa
     object tabManutencao: TTabSheet
       Caption = 'Manuten'#231#227'o'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
       ExplicitHeight = 291
     end
   end
@@ -64,7 +65,6 @@ object formTelaPesquisa: TformTelaPesquisa
     Height = 65
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 312
     object buttonNovo: TBitBtn
       Left = 4
       Top = 24

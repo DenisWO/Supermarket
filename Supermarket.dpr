@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   unitMain in 'unitMain.pas' {formMain},
   unitConnection in 'connection\unitConnection.pas' {DataModuleConnection: TDataModule},
-  unitTelaPesquisa in 'view\unitTelaPesquisa.pas' {formTelaPesquisa};
+  unitTelaPesquisa in 'view\unitTelaPesquisa.pas' {formTelaPesquisa},
+  unitCadastroProduto in 'view\unitCadastroProduto.pas' {formCadastroProduto};
 
 {$R *.res}
 
@@ -12,6 +13,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TformMain, formMain);
-  Application.CreateForm(TformTelaPesquisa, formTelaPesquisa);
   Application.Run;
 end.

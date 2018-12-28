@@ -25,6 +25,7 @@ type
     Vendas1: TMenuItem;
     procedure fechar(Sender: TObject);
     procedure mainCreate(Sender: TObject);
+    procedure Produtos1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,9 +39,12 @@ implementation
 
 {$R *.dfm}
 
+uses unitCadastroProduto, unitTelaPesquisa;
+
+
 procedure TformMain.fechar(Sender: TObject);
 begin
-  Application.Terminate;
+  Close;
 end;
 
 procedure TformMain.mainCreate(Sender: TObject);
@@ -52,6 +56,13 @@ begin
   DataModuleConnection.ConnectionDB.Password := 'root';
   DataModuleConnection.ConnectionDB.Database := 'Supermarket';
   DataModuleConnection.ConnectionDB.Connected := True;
+end;
+
+procedure TformMain.Produtos1Click(Sender: TObject);
+begin
+  formCadastroProduto := TformCadastroProduto.InheritsFrom(TForm);
+  formCadastroProduto.ShowModal;
+  formCadastroProduto.Release;
 end;
 
 end.

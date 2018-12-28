@@ -1,0 +1,27 @@
+unit unitCadastroProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unitTelaPesquisa, Data.DB,
+  ZAbstractRODataset, ZAbstractDataset, ZDataset, Vcl.StdCtrls, Vcl.Mask,
+  Vcl.DBCtrls, Vcl.Buttons, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Vcl.ComCtrls;
+
+type
+  TformCadastroProduto = class(TformTelaPesquisa)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  //formCadastroProduto: TformCadastroProduto;
+  formCadastroProduto : TformCadastroProduto;
+
+implementation
+
+{$R *.dfm}
+
+end.
