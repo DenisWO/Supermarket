@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, unitConnection;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, unitConnection, Enter;
 
 type
   TformMain = class(TForm)
@@ -24,10 +24,12 @@ type
     Devolucao1: TMenuItem;
     Vendas1: TMenuItem;
     procedure fechar(Sender: TObject);
-    procedure mainCreate(Sender: TObject);
+    procedure OnCreate(Sender: TObject);
     procedure Produtos1Click(Sender: TObject);
+    procedure OnClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
+    KeyEnter : TMREnter;
   public
     { Public declarations }
   end;
@@ -44,10 +46,16 @@ uses unitCadastroProduto, unitTelaPesquisa;
 
 procedure TformMain.fechar(Sender: TObject);
 begin
-  Close;
+  Application.Terminate;
 end;
 
-procedure TformMain.mainCreate(Sender: TObject);
+procedure TformMain.OnClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FreeAndNil(KeyEnter);
+  FreeAndNil(DataModuleConnection);
+end;
+
+procedure TformMain.OnCreate(Sender: TObject);
 begin
   DataModuleConnection := TDataModuleConnection.Create(Self);
   DataModuleConnection.ConnectionDB.SQLHourGlass := True;
@@ -56,6 +64,10 @@ begin
   DataModuleConnection.ConnectionDB.Password := 'root';
   DataModuleConnection.ConnectionDB.Database := 'Supermarket';
   DataModuleConnection.ConnectionDB.Connected := True;
+
+  KeyEnter := TMREnter.Create(Self);
+  KeyEnter.FocusEnabled := true;
+  KeyEnter.FocusColor := clInfoBk;
 end;
 
 procedure TformMain.Produtos1Click(Sender: TObject);

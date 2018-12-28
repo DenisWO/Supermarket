@@ -13,7 +13,8 @@ object formMain: TformMain
   Menu = MainPrincipal
   OldCreateOrder = False
   WindowState = wsMaximized
-  OnCreate = mainCreate
+  OnClose = OnClose
+  OnCreate = OnCreate
   PixelsPerInch = 96
   TextHeight = 13
   object MainPrincipal: TMainMenu

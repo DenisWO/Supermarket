@@ -52,10 +52,6 @@ object formTelaPesquisa: TformTelaPesquisa
     object tabManutencao: TTabSheet
       Caption = 'Manuten'#231#227'o'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 291
     end
   end
   object panelTelaPesquisa: TPanel
@@ -67,11 +63,12 @@ object formTelaPesquisa: TformTelaPesquisa
     TabOrder = 1
     object buttonNovo: TBitBtn
       Left = 4
-      Top = 24
+      Top = 25
       Width = 75
       Height = 25
       Caption = '&Novo'
       TabOrder = 0
+      OnClick = buttonNovoClick
     end
     object buttonAlterar: TBitBtn
       Left = 85
@@ -80,6 +77,7 @@ object formTelaPesquisa: TformTelaPesquisa
       Height = 25
       Caption = '&Alterar'
       TabOrder = 1
+      OnClick = buttonAlterarClick
     end
     object buttonCancelar: TBitBtn
       Left = 166
@@ -88,6 +86,7 @@ object formTelaPesquisa: TformTelaPesquisa
       Height = 25
       Caption = '&Cancelar'
       TabOrder = 2
+      OnClick = buttonCancelarClick
     end
     object buttonFechar: TBitBtn
       Left = 677
@@ -98,7 +97,7 @@ object formTelaPesquisa: TformTelaPesquisa
       TabOrder = 3
       OnClick = buttonFecharClick
     end
-    object DBNavigator1: TDBNavigator
+    object buttonNav: TDBNavigator
       Left = 408
       Top = 24
       Width = 224
@@ -114,6 +113,7 @@ object formTelaPesquisa: TformTelaPesquisa
       Height = 25
       Caption = '&Gravar'
       TabOrder = 5
+      OnClick = buttonGravarClick
     end
     object buttonDeletar: TBitBtn
       Left = 327
@@ -122,6 +122,7 @@ object formTelaPesquisa: TformTelaPesquisa
       Height = 25
       Caption = '&Deletar'
       TabOrder = 6
+      OnClick = buttonDeletarClick
     end
   end
   object maskPesquisar: TMaskEdit

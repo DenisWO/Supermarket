@@ -22,15 +22,22 @@ type
     buttonAlterar: TBitBtn;
     buttonCancelar: TBitBtn;
     buttonFechar: TBitBtn;
-    DBNavigator1: TDBNavigator;
+    buttonNav: TDBNavigator;
     buttonGravar: TBitBtn;
     buttonDeletar: TBitBtn;
     queryPesquisa: TZQuery;
     dataSourcePesquisa: TDataSource;
     procedure OnCreate(Sender: TObject);
     procedure buttonFecharClick(Sender: TObject);
+    procedure buttonNovoClick(Sender: TObject);
+    procedure buttonAlterarClick(Sender: TObject);
+    procedure buttonCancelarClick(Sender: TObject);
+    procedure buttonGravarClick(Sender: TObject);
+    procedure buttonDeletarClick(Sender: TObject);
   private
-    { Private declarations }
+    procedure ControleBotoes(buttonNovo, buttonAlterar, buttonCancelar,
+        buttonFechar, buttonGravar, buttonDeletar: TBitBtn; buttonNav: TDBNavigator;
+        pageControl: TPageControl; flag: Boolean);
   public
     { Public declarations }
   end;
@@ -42,9 +49,53 @@ implementation
 
 {$R *.dfm}
 
+procedure TformTelaPesquisa.buttonAlterarClick(Sender: TObject);
+begin
+    ControleBotoes(buttonNovo, buttonAlterar, buttonCancelar, buttonFechar, buttonGravar,
+  buttonDeletar, buttonNav, pageControlTelaPesquisa, False);
+end;
+
+procedure TformTelaPesquisa.buttonCancelarClick(Sender: TObject);
+begin
+    ControleBotoes(buttonNovo, buttonAlterar, buttonCancelar, buttonFechar, buttonGravar,
+  buttonDeletar, buttonNav, pageControlTelaPesquisa, True);
+end;
+
+procedure TformTelaPesquisa.buttonDeletarClick(Sender: TObject);
+begin
+    ControleBotoes(buttonNovo, buttonAlterar, buttonCancelar, buttonFechar, buttonGravar,
+  buttonDeletar, buttonNav, pageControlTelaPesquisa, False);
+end;
+
 procedure TformTelaPesquisa.buttonFecharClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TformTelaPesquisa.buttonGravarClick(Sender: TObject);
+begin
+    ControleBotoes(buttonNovo, buttonAlterar, buttonCancelar, buttonFechar, buttonGravar,
+  buttonDeletar, buttonNav, pageControlTelaPesquisa,True);
+end;
+
+procedure TformTelaPesquisa.buttonNovoClick(Sender: TObject);
+begin
+  ControleBotoes(buttonNovo, buttonAlterar, buttonCancelar, buttonFechar, buttonGravar,
+  buttonDeletar, buttonNav, pageControlTelaPesquisa, False);
+end;
+
+procedure TformTelaPesquisa.ControleBotoes(buttonNovo, buttonAlterar, buttonCancelar,
+  buttonFechar, buttonGravar, buttonDeletar: TBitBtn; buttonNav: TDBNavigator;
+  pageControl: TPageControl; flag: Boolean);
+begin
+  buttonNovo.Enabled := flag;
+  buttonAlterar.Enabled := flag;
+  buttonDeletar.Enabled := flag;
+  buttonNav.Enabled := flag;
+  pageControl.Pages[0].TabVisible := flag;
+  buttonCancelar.Enabled := not(flag);
+  buttonGravar.Enabled := not(flag);
+
 end;
 
 procedure TformTelaPesquisa.OnCreate(Sender: TObject);
